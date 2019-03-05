@@ -7,10 +7,15 @@
     "start": "node src/init.js",
     "dev": "nodemon src/init.js"
   },
+  "engines": {
+    "node": "11.10.1",
+    "npm": "6.8.0"
+  },
   "author": "Ryan Hotton",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
