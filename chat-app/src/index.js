@@ -12,6 +12,9 @@ const io = socketio(server)
 const port = process.env.PORT || 3000
 const publicDirectoryPath = path.join(__dirname, '../public')
 
+// Clear console
+console.clear()
+
 app.use(express.static(publicDirectoryPath))
 
 io.on('connection', (socket) => {
