@@ -1,3 +1,5 @@
+const _ = require('lodash')
+
 const users = []
 
 const addUser = ({ id, username, room }) => {
@@ -48,9 +50,14 @@ const getUsersInRoom = (room) => {
     return users.filter((user) => user.room === room)
 }
 
+const getRooms = () => {
+    return _.map(_.sortedUniqBy(users, 'room'), 'room').reverse()
+}
+
 module.exports = {
     addUser,
     removeUser,
     getUser,
-    getUsersInRoom
+    getUsersInRoom,
+    getRooms
 }

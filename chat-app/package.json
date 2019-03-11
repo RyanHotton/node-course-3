@@ -14,8 +14,10 @@
   "author": "Ryan Hotton",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.7.7",
     "bad-words": "^3.0.1",
     "express": "^4.16.4",
+    "lodash": "^4.17.11",
     "socket.io": "^2.2.0"
   },
   "devDependencies": {

@@ -44,6 +44,7 @@ button {
     border: none;
     color: white;
     font-size: 16px;
+    -webkit-transition: background .3s ease;
     transition: background .3s ease;
 }
 
@@ -62,9 +63,15 @@ button:disabled {
     background: #333744;
     width: 100vw;
     height: 100vh;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .centered-form__box {
@@ -86,6 +93,8 @@ button:disabled {
 /* Chat Page Layout */
 
 .chat {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -100,14 +109,23 @@ button:disabled {
 /* Chat styles */
 
 .chat__main {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-height: 100vh;
 }
 
 .chat__messages {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     padding: 24px 24px 0 24px;
     overflow-y: scroll;
 }
@@ -136,15 +154,22 @@ button:disabled {
 /* Message Composition Styles */
 
 .compose {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-shrink: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     margin-top: 16px;
     padding: 24px;
 }
 
 .compose form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     margin-right: 16px;
 }
 
@@ -153,7 +178,9 @@ button:disabled {
     width: 100%;
     padding: 12px;
     margin: 0 16px 0 0;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .compose button {
@@ -180,4 +207,15 @@ button:disabled {
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
+}
+
+/* Additional CSS - Ryan */
+
+select.room-drop-down {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+form input[type="text"] {
+    text-transform: lowercase;
 }
